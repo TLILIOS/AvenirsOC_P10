@@ -1,0 +1,92 @@
+# Contenu pour la présentation P10 - DA - Avenirs
+
+## Diapositive de titre
+Titre: Application Avenirs - Plateforme de Tutorat Mobile
+Sous-titre: Projet P10 - Documentation d'Architecture
+
+## Introduction
+- Objectif du projet: Développer une application mobile iOS facilitant la relation de tutorat entre tuteurs et tutorés
+- Public cible: Professionnels en reconversion et mentors dans le domaine de la formation
+- Problématique: Comment faciliter l'accompagnement personnalisé et le suivi des objectifs dans un cadre de tutorat professionnel?
+
+## Contexte du projet
+- Application destinée aux utilisateurs d'iOS (iPhone, iPad)
+- Besoin d'un système de communication efficace entre tuteurs et tutorés
+- Nécessité de suivre les objectifs d'apprentissage et d'évolution professionnelle
+- Organisation et planification des entretiens de tutorat
+
+## Présentation de l'architecture fonctionnelle
+- Système de gestion de comptes utilisateur (tuteurs et tutorés)
+- Planification et suivi des entretiens
+- Messagerie intégrée pour la communication
+- Définition et suivi des objectifs d'apprentissage
+- Gestion des disponibilités des tuteurs
+
+## Diagramme de classes UML
+- Classe abstraite Utilisateur avec attributs communs (id, email, nom, type)
+- Spécialisation en Tuteur (avec disponibilités) et Tutoré (avec profil)
+- Entités principales: Entretien, Objectif, Message
+- Relations entre entités (participation aux entretiens, suivi des objectifs, etc.)
+
+## Modèle physique de données
+- Structure de la base de données avec tables principales:
+  * utilisateurs (pour tuteurs et tutorés)
+  * entretiens
+  * objectifs
+  * messages
+  * disponibilites
+- Organisation des clés étrangères pour maintenir les relations
+
+## Fonctionnalités principales
+1. Authentification et gestion de profil
+2. Recherche et consultation des disponibilités des tuteurs
+3. Planification et gestion des entretiens
+4. Messagerie instantanée dans le contexte des entretiens
+5. Définition et suivi des objectifs d'apprentissage
+6. Notifications pour les événements importants
+
+## Choix technologiques iOS
+- Swift comme langage de programmation principal
+- SwiftUI pour l'interface utilisateur moderne et réactive
+- Core Data pour la persistance locale des données
+- Firebase pour la base de données en temps réel et l'authentification
+- Push Notifications pour les alertes importantes
+- CloudKit pour la synchronisation entre appareils Apple
+
+## Architecture technique
+- Pattern MVVM (Model-View-ViewModel) pour la séparation des préoccupations
+- Injection de dépendances pour faciliter les tests
+- Services pour l'accès aux données distantes
+- Repositories pour l'abstraction de la source de données
+- Gestionnaires d'état pour la communication entre composants
+
+## Veille technologique iOS
+- Sources principales: Apple Developer, Swift by Sundell, GitHub Trending
+- Domaines de veille:
+  * Nouvelles fonctionnalités d'iOS et Swift
+  * Bonnes pratiques de développement
+  * Bibliothèques et frameworks émergents
+  * Sécurité des applications mobiles
+  * Optimisation des performances
+
+## Contraintes et défis
+- Compatibilité avec les différentes versions d'iOS
+- Sécurité des données personnelles (RGPD)
+- Expérience utilisateur intuitive et efficace
+- Gestion de la connectivité intermittente
+- Notifications fiables et pertinentes
+
+## Planning et méthodologie
+- Approche Agile Scrum avec sprints de 2 semaines
+- Phases principales:
+  * Conception et validation de l'architecture
+  * Développement des fonctionnalités core
+  * Tests utilisateurs et itérations
+  * Finalisation et préparation au déploiement
+- Utilisation de GitHub pour la gestion du code et des sprints
+
+## Conclusion
+- Application Avenirs: une solution moderne pour le tutorat professionnel
+- Architecture robuste et extensible
+- Expérience utilisateur centrée sur l'efficacité de la relation tuteur-tutoré
+- Prochaines étapes: développement, tests utilisateurs, déploiement
